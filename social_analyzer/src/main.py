@@ -1,20 +1,85 @@
-from usuario import Usuario
-from conversacion import Conversacion
-from analizador import Analizador
+from datetime import datetime
+
+from src.usuario import Usuario
+from src.mensaje import Mensaje
+from src.conversacion import Conversacion
+from src.analizador import Analizador
+
 
 def main():
-    usuario = Usuario("U001", "Javier")
 
-    conversacion = Conversacion(
-        "Conversación de prueba"
+    javier = Usuario(
+        "U001",
+        "Javier"
     )
 
-    conversacion.agregar_participante(usuario)
+    carlos = Usuario(
+        "U002",
+        "Carlos"
+    )
 
-    analizador = Analizador(conversacion)
+    conversacion = Conversacion(
+        "Grupo TPA"
+    )
 
-    print("=== Analizador de Redes Sociales ===")
-    print(analizador.calcular_estadisticas())
+    conversacion.agregar_mensaje(
+        Mensaje(
+            "M001",
+            "Hola equipo",
+            datetime.now(),
+            javier
+        )
+    )
+
+    conversacion.agregar_mensaje(
+        Mensaje(
+            "M002",
+            "Hola Javier",
+            datetime.now(),
+            carlos
+        )
+    )
+
+    conversacion.agregar_mensaje(
+        Mensaje(
+            "M003",
+            "Vamos con la práctica",
+            datetime.now(),
+            javier
+        )
+    )
+
+    analizador = Analizador(
+        conversacion
+    )
+
+    print(
+        "\n=== ANALIZADOR DE REDES SOCIALES ===\n"
+    )
+
+    print(
+        "Estadísticas:"
+    )
+
+    print(
+        analizador.calcular_estadisticas()
+    )
+
+    print(
+        "\nParticipación:"
+    )
+
+    print(
+        analizador.calcular_participacion()
+    )
+
+    print(
+        "\nPalabras frecuentes:"
+    )
+
+    print(
+        analizador.palabras_frecuentes()
+    )
 
 if __name__ == "__main__":
-    main()\n
+    main()

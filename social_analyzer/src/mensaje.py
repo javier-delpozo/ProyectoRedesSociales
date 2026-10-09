@@ -1,16 +1,29 @@
 from datetime import datetime
-from usuario import Usuario
+from src.usuario import Usuario
+
 
 class Mensaje:
-    def __init__(self, id_mensaje: str, contenido: str,
-                 fecha: datetime, usuario: Usuario):
+    """
+    Representa un mensaje enviado por un usuario.
+    """
+
+    def __init__(
+        self,
+        id_mensaje: str,
+        contenido: str,
+        fecha: datetime,
+        usuario: Usuario
+    ):
         self.id_mensaje = id_mensaje
         self.contenido = contenido
         self.fecha = fecha
         self.usuario = usuario
 
-    def obtener_longitud(self):
+    def obtener_longitud(self) -> int:
         return len(self.contenido)
 
+    def obtener_palabras(self):
+        return self.contenido.split()
+
     def __repr__(self):
-        return f"Mensaje({self.usuario.nombre})"\n
+        return f"Mensaje({self.usuario.nombre})"

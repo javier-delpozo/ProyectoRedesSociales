@@ -1,1 +1,2 @@
-\n
+pytest
+pytest-cov

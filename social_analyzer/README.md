@@ -4,13 +4,6 @@ Proyecto desarrollado en Python para la asignatura de Técnicas de Programación
 
 La aplicación permitirá importar y analizar conversaciones procedentes de redes sociales o plataformas de mensajería, con el objetivo de obtener estadísticas de participación, detectar temas frecuentes, estudiar la actividad temporal y generar informes visuales.
 
-## Miembros del grupo
-
-- Javier Del Pozo
-- Nombre y apellidos del integrante 2
-- Nombre y apellidos del integrante 3
-- Nombre y apellidos del integrante 4
-
 ## Funcionalidades principales
 
 La aplicación contará con las siguientes funcionalidades:
