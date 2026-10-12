@@ -1,52 +1,13 @@
-from datetime import datetime
-
-from src.usuario import Usuario
-from src.mensaje import Mensaje
-from src.conversacion import Conversacion
+from src.importador import ImportadorCSV
 from src.analizador import Analizador
 
 
 def main():
 
-    javier = Usuario(
-        "U001",
-        "Javier"
-    )
+    importador = ImportadorCSV()
 
-    carlos = Usuario(
-        "U002",
-        "Carlos"
-    )
-
-    conversacion = Conversacion(
-        "Grupo TPA"
-    )
-
-    conversacion.agregar_mensaje(
-        Mensaje(
-            "M001",
-            "Hola equipo",
-            datetime.now(),
-            javier
-        )
-    )
-
-    conversacion.agregar_mensaje(
-        Mensaje(
-            "M002",
-            "Hola Javier",
-            datetime.now(),
-            carlos
-        )
-    )
-
-    conversacion.agregar_mensaje(
-        Mensaje(
-            "M003",
-            "Vamos con la práctica",
-            datetime.now(),
-            javier
-        )
+    conversacion = importador.cargar(
+        "tests/datos/conversacion.csv"
     )
 
     analizador = Analizador(
@@ -58,15 +19,7 @@ def main():
     )
 
     print(
-        "Estadísticas:"
-    )
-
-    print(
         analizador.calcular_estadisticas()
-    )
-
-    print(
-        "\nParticipación:"
     )
 
     print(
@@ -74,12 +27,9 @@ def main():
     )
 
     print(
-        "\nPalabras frecuentes:"
-    )
-
-    print(
         analizador.palabras_frecuentes()
     )
+
 
 if __name__ == "__main__":
     main()
