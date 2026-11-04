@@ -2,6 +2,125 @@
 
 Aplicación Python para importar conversaciones exportadas, normalizarlas y obtener métricas de participación, temas frecuentes y actividad temporal.
 
+## Diagrama UML
+
+El siguiente diagrama representa la arquitectura actual del Analizador de Redes Sociales. 
+El diseño separa el dominio, la importación de datos, el análisis, la persistencia y la interfaz de línea de comandos.
+
+```mermaid
+classDiagram
+    direction TB
+
+    class Usuario {
+        +nombre: str
+    }
+
+    class Mensaje {
+        +autor: Usuario
+        +contenido: str
+        +fecha: datetime
+    }
+
+    class Conversacion {
+        +id: int
+        +nombre: str
+        +mensajes: list
+        +agregar(mensaje)
+        +participantes()
+    }
+
+    class Importador {
+        <<abstract>>
+        +importar(ruta, nombre) Conversacion
+    }
+
+    class ImportadorCSV {
+        +importar(ruta, nombre) Conversacion
+    }
+
+    class Analizador {
+        +resumen()
+        +participacion()
+        +temas_frecuentes()
+        +actividad_temporal()
+    }
+
+    class AnalizadorParticipacion {
+        +analizar(conversacion)
+    }
+
+    class AnalizadorTemas {
+        +analizar(conversacion)
+    }
+
+    class AnalizadorTemporal {
+        +analizar(conversacion)
+    }
+
+    class RepositorioSQLite {
+        -ruta: Path
+        +inicializar()
+        +guardar(conversacion) int
+        +obtener(id) Conversacion
+        +listar() list
+        +eliminar(id)
+        -_conexion()
+        -_conectar()
+    }
+
+    class CLI {
+        +main()
+        +ejecutar(args)
+    }
+
+    class Reporting {
+        +exportar_csv()
+        +exportar_json()
+    }
+
+    Importador <|-- ImportadorCSV : herencia
+
+    Usuario "1" --> "0..*" Mensaje : escribe
+    Conversacion "1" *-- "0..*" Mensaje : contiene
+
+    ImportadorCSV ..> Usuario : crea
+    ImportadorCSV ..> Mensaje : crea
+    ImportadorCSV --> Conversacion : construye
+
+    Analizador --> AnalizadorParticipacion : utiliza
+    Analizador --> AnalizadorTemas : utiliza
+    Analizador --> AnalizadorTemporal : utiliza
+
+    AnalizadorParticipacion --> Conversacion : analiza
+    AnalizadorTemas --> Conversacion : analiza
+    AnalizadorTemporal --> Conversacion : analiza
+
+    RepositorioSQLite --> Conversacion : persiste
+
+    CLI --> Importador : utiliza
+    CLI --> RepositorioSQLite : utiliza
+    CLI --> Analizador : utiliza
+    CLI --> Reporting : utiliza
+
+    Reporting --> Conversacion : exporta
+```
+
+### Decisiones de diseño
+
+La arquitectura se ha dividido en varias responsabilidades:
+
+- **Dominio:** `Usuario`, `Mensaje` y `Conversacion` representan las entidades principales.
+- **Importación:** `Importador` define una abstracción común y `ImportadorCSV` implementa la importación desde CSV.
+- **Análisis:** las responsabilidades se dividen entre `AnalizadorParticipacion`, `AnalizadorTemas` y `AnalizadorTemporal`.
+- **Persistencia:** `RepositorioSQLite` permite almacenar y recuperar conversaciones mediante SQLite.
+- **Presentación:** la CLI coordina las operaciones disponibles para el usuario.
+- **Salida:** el módulo de reporting permite exportar los resultados.
+
+La relación entre `Importador` e `ImportadorCSV` permite aplicar herencia, abstracción, sobrescritura y polimorfismo. De esta forma pueden incorporarse otros importadores en el futuro sin modificar el modelo de dominio.
+
+La separación de los distintos tipos de análisis evita concentrar todas las responsabilidades en una única clase y facilita la ampliación del proyecto.
+
+
 ## Estado de PRAC3
 
 La entrega incorpora:
