@@ -4,24 +4,26 @@
 
 El programa transforma una conversación exportada en un conjunto homogéneo de mensajes, la guarda en una base SQLite y genera estadísticas reproducibles. Los datos permanecen en el equipo; no se envían a servicios externos.
 
-## 2. Instalación
+## 2. Instalación multiplataforma
 
 1. Instala Python 3.10 o posterior.
 2. Abre una terminal en la raíz del proyecto.
 3. Crea y activa un entorno virtual.
 4. Instala el paquete:
 
-```bash
+```powershell
 python -m venv .venv
-source .venv/bin/activate       # Linux/macOS
-# .venv\Scripts\Activate.ps1   # Windows PowerShell
+.\.venv\Scripts\Activate.ps1   # Windows PowerShell
 python -m pip install -e .
 ```
+
+En macOS/Linux, la activación equivalente es `source .venv/bin/activate`.
 
 Comprueba la instalación con:
 
 ```bash
 python -m analizador_redes --help
+python -m analizador_redes --version
 ```
 
 ## 3. Preparar el CSV
@@ -76,6 +78,17 @@ python -m analizador_redes --db datos/conversaciones.sqlite3 \
 
 El resumen contiene número de mensajes y participantes, participación porcentual, longitud media, términos frecuentes y actividad por fecha y hora.
 
+Guardar además un informe visual autocontenido:
+
+```bash
+python -m analizador_redes --db datos/conversaciones.sqlite3 \
+  analizar 1 --top 15 -o informes/grupo.json --html informes/grupo.html
+```
+
+El HTML muestra barras de participación y temas, actividad por fecha y hora y dos indicadores de
+resumen. Se abre directamente en un navegador, no carga recursos externos y se adapta a pantalla e
+impresión.
+
 ### Exportar mensajes normalizados
 
 ```bash
@@ -116,3 +129,13 @@ Los errores esperados (fichero ausente, cabecera incorrecta, fila inválida o id
 | `Fila N inválida` | Corrige autor, contenido o fecha de esa fila. |
 | `El CSV debe estar codificado en UTF-8` | Vuelve a guardar el archivo como UTF-8. |
 | `No existe la conversación con id N` | Ejecuta `listar` y usa un id existente. |
+
+## 8. Demo y documentación
+
+```powershell
+python scripts/demo.py
+python scripts/generar_documentacion.py
+```
+
+La demo escribe únicamente en `build/demo`: base SQLite, JSON, CSV e `informe.html`. La documentación
+API queda en `build/docs/api`.

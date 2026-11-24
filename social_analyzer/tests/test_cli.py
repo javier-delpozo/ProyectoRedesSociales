@@ -1,8 +1,11 @@
 import json
 
+import pytest
+
 from analizador_redes.cli import main
 
 
+@pytest.mark.integration
 def test_flujo_cli_completo(tmp_path, capsys):
     csv_path = tmp_path / "chat.csv"
     csv_path.write_text(
@@ -27,8 +30,24 @@ def test_flujo_cli_completo(tmp_path, capsys):
     assert resumen["total_mensajes"] == 2
 
     informe = tmp_path / "informe.json"
-    assert main(["--db", str(db), "analizar", "1", "-o", str(informe)]) == 0
+    informe_html = tmp_path / "informe.html"
+    assert (
+        main(
+            [
+                "--db",
+                str(db),
+                "analizar",
+                "1",
+                "-o",
+                str(informe),
+                "--html",
+                str(informe_html),
+            ]
+        )
+        == 0
+    )
     assert informe.exists()
+    assert informe_html.exists()
 
     exportado = tmp_path / "mensajes.csv"
     assert main(["--db", str(db), "exportar", "1", str(exportado)]) == 0
@@ -37,6 +56,14 @@ def test_flujo_cli_completo(tmp_path, capsys):
     assert main(["--db", str(db), "eliminar", "1"]) == 0
     assert main(["--db", str(db), "listar"]) == 0
     assert "No hay conversaciones" in capsys.readouterr().out
+
+
+def test_cli_muestra_version(capsys):
+    with pytest.raises(SystemExit) as exc_info:
+        main(["--version"])
+
+    assert exc_info.value.code == 0
+    assert "1.0.0" in capsys.readouterr().out
 
 
 def test_cli_error_controlado(tmp_path, capfd):

@@ -1,4 +1,301 @@
-autor,contenido,fecha
-Ana,Revisamos el lanzamiento y el informe,2026-10-30T09:00:00+01:00
-Luis,El informe está listo para revisión,2026-10-30T10:15:00+01:00
-Ana,Compartimos los resultados mañana,2026-10-31T16:30:00+01:00
+﻿autor,contenido,fecha
+Ana,"Por mi parte, he corregido el ejemplo de ejecución en la documentación de Windows sin utilizar datos personales reales.",2026-10-19T09:00:00
+Elena,"Por mi parte, la base SQLite conserva correctamente los mensajes importados sin utilizar datos personales reales.",2026-10-19T09:05:00
+Ana,he añadido un caso de prueba para la exportación del informe,2026-10-19T09:23:45
+Marta,"Antes de cerrar, la prueba de persistencia confirma el alta consulta y eliminación antes de finalizar el día.",2026-10-19T10:28:00
+Ana,"Según lo acordado, he actualizado el informe con los últimos datos del proyecto sin utilizar datos personales reales.",2026-10-19T10:33:00
+Pablo,"Antes de cerrar, he actualizado el informe con los últimos datos del proyecto para que podamos revisarlo en equipo.",2026-10-19T10:58:00
+Luis,"Por mi parte, voy a revisar la eliminación segura de registros en SQLite y dejaré el resultado documentado.",2026-10-19T11:20:30
+Pablo,"Para la siguiente revisión, ya está preparada la lista de comprobaciones del lanzamiento.",2026-10-19T11:22:00
+Marta,"Como seguimiento, voy a revisar que la guía de uso coincida con la interfaz actual antes de finalizar el día.",2026-10-19T11:43:00
+Luis,"Como seguimiento, la persistencia permite recuperar la conversación entre ejecuciones antes de finalizar el día.",2026-10-19T11:53:00
+Ana,"Antes de cerrar, revisamos el plan de lanzamiento en la reunión de esta tarde y dejaré el resultado documentado.",2026-10-19T12:04:00
+Pablo,"Por mi parte, la reunión de seguimiento se centrará en riesgos y bloqueos",2026-10-19T12:12:30
+Marta,"Según lo acordado, necesitamos conservar una copia anonimizada de los datos de demostración.",2026-10-19T12:31:00
+Luis,"Según lo acordado, revisamos el plan de lanzamiento en la reunión de esta tarde.",2026-10-19T12:36:15
+Pablo,"Como seguimiento, el lanzamiento depende de cerrar la documentación y la demo",2026-10-19T12:49:15
+Luis,"Como seguimiento, confirmamos el lanzamiento cuando termine la última revisión sin utilizar datos personales reales.",2026-10-19T13:35:00
+Elena,"Para la siguiente revisión, voy a revisar la calidad de los datos antes del análisis y dejaré el resultado documentado.",2026-10-19T14:47:00
+Marta,falta incorporar una captura del informe en la documentación para que podamos revisarlo en equipo.,2026-10-19T14:55:00
+Carlos,"Para la siguiente revisión, las pruebas del importador han terminado correctamente.",2026-10-19T15:24:00
+Carlos,ya está preparada la lista de comprobaciones del lanzamiento,2026-10-19T16:39:30
+Pablo,"Según lo acordado, revisamos el plan de lanzamiento en la reunión de esta tarde sin utilizar datos personales reales.",2026-10-19T17:24:15
+Luis,"Antes de cerrar, he actualizado el informe con los últimos datos del proyecto antes de finalizar el día.",2026-10-19T17:32:00
+Luis,"Antes de cerrar, la documentación incluye ahora el diagrama de arquitectura.",2026-10-19T17:45:00
+Marta,he preparado una agenda breve para la reunión del equipo.,2026-10-19T17:54:00
+Marta,"Antes de cerrar, la cobertura de pruebas se mantiene por encima del objetivo antes de finalizar el día.",2026-10-19T18:11:00
+Marta,"Como seguimiento, revisaré el informe antes de compartir la versión definitiva antes de finalizar el día.",2026-10-19T18:11:15
+Ana,"Para la siguiente revisión, falta incorporar una captura del informe en la documentación y dejaré el resultado documentado.",2026-10-19T18:18:30
+Luis,confirmamos el lanzamiento cuando termine la última revisión.,2026-10-20T09:50:00
+Elena,"Según lo acordado, el análisis de actividad por fecha ya aparece en el informe visual y dejaré el resultado documentado.",2026-10-20T09:54:15
+Carlos,"Según lo acordado, falta incorporar una captura del informe en la documentación sin utilizar datos personales reales.",2026-10-20T10:01:00
+Marta,"Antes de cerrar, voy a revisar la calidad de los datos antes del análisis",2026-10-20T10:14:15
+Carlos,revisaré el informe antes de compartir la versión definitiva para que podamos revisarlo en equipo.,2026-10-20T10:30:15
+Luis,"Según lo acordado, durante la reunión podemos validar la demo completa para que podamos revisarlo en equipo.",2026-10-20T10:48:00
+Marta,"Para la siguiente revisión, revisaré el informe antes de compartir la versión definitiva antes de finalizar el día.",2026-10-20T10:58:45
+Elena,"Según lo acordado, las pruebas del importador han terminado correctamente antes de finalizar el día.",2026-10-20T11:09:30
+Luis,"En la última ejecución, voy a ejecutar las pruebas de integración antes de fusionar los cambios y dejaré el resultado documentado.",2026-10-20T11:18:45
+Marta,la participación está repartida entre varios miembros del equipo sin utilizar datos personales reales.,2026-10-20T11:25:15
+Ana,"Como seguimiento, he ampliado la documentación con instrucciones de instalación para que podamos revisarlo en equipo.",2026-10-20T11:39:00
+Ana,"Para la siguiente revisión, el análisis temporal muestra un pico de actividad por la mañana",2026-10-20T11:40:00
+Elena,"Para la siguiente revisión, el informe ya incluye el resumen de participación y actividad",2026-10-20T11:59:15
+Carlos,el informe ya incluye el resumen de participación y actividad antes de finalizar el día.,2026-10-20T13:15:15
+Marta,"Confirmamos el lanzamiento cuando termine la última revisión. Cuando esté listo, avisad por el canal del proyecto.",2026-10-20T13:45:30
+Marta,"Como seguimiento, he corregido las conclusiones del informe tras la revisión",2026-10-20T13:47:45
+Marta,"Según lo acordado, el informe visual refleja correctamente los resultados del análisis antes de finalizar el día.",2026-10-20T13:53:45
+Carlos,"Antes de cerrar, he comprobado que todas las conexiones de persistencia se cierran sin utilizar datos personales reales.",2026-10-20T14:09:45
+Elena,"Para la siguiente revisión, queda repetir las pruebas en Windows antes de cerrar la versión.",2026-10-20T15:03:15
+Ana,"Por mi parte, he corregido las conclusiones del informe tras la revisión antes de finalizar el día.",2026-10-20T18:45:30
+Pablo,"Según lo acordado, el informe ya incluye el resumen de participación y actividad y dejaré el resultado documentado.",2026-10-20T18:56:00
+Ana,el análisis temporal muestra un pico de actividad por la mañana sin utilizar datos personales reales.,2026-10-20T19:37:00
+Pablo,"Antes de cerrar, revisaré el informe antes de compartir la versión definitiva.",2026-10-21T09:18:00
+Pablo,"En la última ejecución, falta incorporar una captura del informe en la documentación para que podamos revisarlo en equipo.",2026-10-21T09:31:00
+Pablo,"En la última ejecución, el informe visual refleja correctamente los resultados del análisis.",2026-10-21T10:04:15
+Carlos,"En la última ejecución, voy a revisar que la guía de uso coincida con la interfaz actual.",2026-10-21T10:05:15
+Pablo,"Según lo acordado, el informe visual refleja correctamente los resultados del análisis",2026-10-21T10:49:00
+Ana,"En la última ejecución, ya está preparada la lista de comprobaciones del lanzamiento sin utilizar datos personales reales.",2026-10-21T10:50:00
+Marta,las pruebas de persistencia cubren el ciclo completo de la conversación,2026-10-21T11:21:15
+Luis,"En la última ejecución, he actualizado el informe con los últimos datos del proyecto para que podamos revisarlo en equipo.",2026-10-21T11:52:00
+Marta,"Por mi parte, queda repetir las pruebas en Windows antes de cerrar la versión sin utilizar datos personales reales.",2026-10-21T12:32:30
+Ana,"Para la siguiente revisión, las pruebas del importador han terminado correctamente sin utilizar datos personales reales.",2026-10-21T13:40:15
+Carlos,"Para la siguiente revisión, la validación de datos ha terminado sin errores antes de finalizar el día.",2026-10-21T13:59:30
+Marta,la persistencia permite recuperar la conversación entre ejecuciones sin utilizar datos personales reales.,2026-10-21T14:21:30
+Carlos,"Por mi parte, confirmamos el lanzamiento cuando termine la última revisión y dejaré el resultado documentado.",2026-10-21T16:04:45
+Pablo,he añadido un caso de prueba para la exportación del informe.,2026-10-21T16:39:00
+Ana,"En la última ejecución, en la reunión repasaremos los resultados y los próximos pasos sin utilizar datos personales reales.",2026-10-21T16:50:00
+Ana,"Por mi parte, las pruebas del importador han terminado correctamente y dejaré el resultado documentado.",2026-10-21T16:51:00
+Marta,"Por mi parte, voy a revisar que la guía de uso coincida con la interfaz actual antes de finalizar el día.",2026-10-21T17:54:15
+Ana,"Antes de cerrar, la prueba de persistencia confirma el alta consulta y eliminación antes de finalizar el día.",2026-10-21T18:46:15
+Carlos,"Antes de cerrar, he preparado una agenda breve para la reunión del equipo y dejaré el resultado documentado.",2026-10-22T09:14:00
+Marta,"Según lo acordado, el informe ya incluye el resumen de participación y actividad",2026-10-22T09:24:00
+Ana,"Por mi parte, el lanzamiento depende de cerrar la documentación y la demo antes de finalizar el día.",2026-10-22T09:29:00
+Luis,queda repetir las pruebas en Windows antes de cerrar la versión sin utilizar datos personales reales.,2026-10-22T09:47:15
+Carlos,"Para la siguiente revisión, revisaré el informe antes de compartir la versión definitiva para que podamos revisarlo en equipo.",2026-10-22T10:18:00
+Carlos,"Antes de cerrar, queda repetir las pruebas en Windows antes de cerrar la versión y dejaré el resultado documentado.",2026-10-22T10:26:45
+Ana,"Como seguimiento, el análisis temporal muestra un pico de actividad por la mañana antes de finalizar el día.",2026-10-22T10:59:15
+Luis,"Como seguimiento, he encontrado una fila incompleta en los datos de ejemplo.",2026-10-22T11:20:30
+Luis,"Para la siguiente revisión, la base SQLite conserva correctamente los mensajes importados",2026-10-22T11:21:00
+Luis,"Según lo acordado, la validación de datos ha terminado sin errores para que podamos revisarlo en equipo.",2026-10-22T11:34:45
+Luis,"Como seguimiento, las pruebas de persistencia cubren el ciclo completo de la conversación antes de finalizar el día.",2026-10-22T11:56:00
+Ana,el informe ya incluye el resumen de participación y actividad sin utilizar datos personales reales.,2026-10-22T12:41:00
+Elena,"Para la siguiente revisión, el repositorio de persistencia ya controla identificadores inexistentes sin utilizar datos personales reales.",2026-10-22T13:11:45
+Carlos,"Por mi parte, falta validar una tabla del informe para cerrar la entrega",2026-10-22T13:20:45
+Carlos,"En la última ejecución, revisamos el plan de lanzamiento en la reunión de esta tarde.",2026-10-22T13:51:00
+Luis,"Por mi parte, la participación está repartida entre varios miembros del equipo sin utilizar datos personales reales.",2026-10-22T14:07:00
+Elena,"He encontrado una fila incompleta en los datos de ejemplo. Cuando esté listo, avisad por el canal del proyecto.",2026-10-22T14:23:00
+Luis,"Por mi parte, los datos de actividad ya están preparados para la siguiente prueba.",2026-10-22T15:10:45
+Ana,"Antes de cerrar, he preparado una agenda breve para la reunión del equipo antes de finalizar el día.",2026-10-22T15:17:00
+Luis,"En la última ejecución, la persistencia permite recuperar la conversación entre ejecuciones para que podamos revisarlo en equipo.",2026-10-22T15:27:15
+Luis,"Antes de cerrar, ya está preparada la lista de comprobaciones del lanzamiento sin utilizar datos personales reales.",2026-10-22T16:04:00
+Marta,"Para la siguiente revisión, voy a ejecutar las pruebas de integración antes de fusionar los cambios",2026-10-22T16:08:00
+Luis,"Por mi parte, los datos de actividad ya están preparados para la siguiente prueba para que podamos revisarlo en equipo.",2026-10-22T16:56:00
+Ana,"Como seguimiento, confirmamos el lanzamiento cuando termine la última revisión para que podamos revisarlo en equipo.",2026-10-22T16:56:00
+Marta,"En la última ejecución, falta validar una tabla del informe para cerrar la entrega sin utilizar datos personales reales.",2026-10-22T17:18:00
+Luis,"En la última ejecución, voy a revisar que la guía de uso coincida con la interfaz actual y dejaré el resultado documentado.",2026-10-22T17:27:00
+Pablo,"Antes de cerrar, he ampliado la documentación con instrucciones de instalación antes de finalizar el día.",2026-10-22T17:29:15
+Elena,"Según lo acordado, el informe visual refleja correctamente los resultados del análisis antes de finalizar el día.",2026-10-22T17:48:45
+Luis,"Para la siguiente revisión, voy a revisar la calidad de los datos antes del análisis antes de finalizar el día.",2026-10-22T18:37:00
+Luis,"Según lo acordado, he actualizado el informe con los últimos datos del proyecto",2026-10-23T09:37:00
+Ana,"Como seguimiento, queda repetir las pruebas en Windows antes de cerrar la versión",2026-10-23T10:09:45
+Marta,"En la última ejecución, compartiré el resumen de la reunión al terminar antes de finalizar el día.",2026-10-23T10:31:00
+Marta,la documentación incluye ahora el diagrama de arquitectura,2026-10-23T10:48:00
+Luis,"Como seguimiento, he encontrado una fila incompleta en los datos de ejemplo sin utilizar datos personales reales.",2026-10-23T11:22:30
+Carlos,"Antes de cerrar, he preparado una agenda breve para la reunión del equipo sin utilizar datos personales reales.",2026-10-23T11:30:00
+Ana,los datos importados coinciden con el archivo de origen,2026-10-23T11:32:45
+Marta,"Para la siguiente revisión, las pruebas de persistencia cubren el ciclo completo de la conversación.",2026-10-23T11:44:00
+Luis,"Según lo acordado, en la reunión repasaremos los resultados y los próximos pasos y dejaré el resultado documentado.",2026-10-23T11:49:00
+Luis,"Antes de cerrar, las pruebas de persistencia cubren el ciclo completo de la conversación",2026-10-23T12:17:30
+Pablo,"Para la siguiente revisión, las pruebas del importador han terminado correctamente",2026-10-23T13:01:00
+Ana,"Para la siguiente revisión, ya está preparada la lista de comprobaciones del lanzamiento y dejaré el resultado documentado.",2026-10-23T13:46:30
+Luis,"Antes de cerrar, revisaré el informe antes de compartir la versión definitiva y dejaré el resultado documentado.",2026-10-23T13:59:45
+Luis,"En la última ejecución, ya está preparada la lista de comprobaciones del lanzamiento para que podamos revisarlo en equipo.",2026-10-23T16:02:30
+Marta,"Como seguimiento, he encontrado una fila incompleta en los datos de ejemplo para que podamos revisarlo en equipo.",2026-10-23T16:15:30
+Marta,"En la última ejecución, voy a ejecutar las pruebas de integración antes de fusionar los cambios sin utilizar datos personales reales.",2026-10-23T16:23:30
+Carlos,"Por mi parte, he corregido las conclusiones del informe tras la revisión y dejaré el resultado documentado.",2026-10-23T16:40:00
+Ana,"Según lo acordado, el informe ya incluye el resumen de participación y actividad sin utilizar datos personales reales.",2026-10-23T16:43:00
+Carlos,"En la última ejecución, las pruebas del importador han terminado correctamente para que podamos revisarlo en equipo.",2026-10-23T16:54:15
+Marta,"Como seguimiento, el informe visual refleja correctamente los resultados del análisis sin utilizar datos personales reales.",2026-10-23T17:03:45
+Pablo,"Antes de cerrar, la versión candidata al lanzamiento funciona en los tres sistemas para que podamos revisarlo en equipo.",2026-10-23T17:18:00
+Carlos,"En la última ejecución, he ampliado la documentación con instrucciones de instalación sin utilizar datos personales reales.",2026-10-23T17:27:30
+Marta,el repositorio de persistencia ya controla identificadores inexistentes.,2026-10-23T17:39:15
+Elena,"En la última ejecución, la versión candidata al lanzamiento funciona en los tres sistemas para que podamos revisarlo en equipo.",2026-10-23T18:27:00
+Marta,"El informe visual refleja correctamente los resultados del análisis. Cuando esté listo, avisad por el canal del proyecto.",2026-10-23T18:28:30
+Elena,"En la última ejecución, he actualizado el informe con los últimos datos del proyecto",2026-10-23T18:29:30
+Ana,"Por mi parte, voy a ejecutar las pruebas de integración antes de fusionar los cambios",2026-10-23T18:40:30
+Luis,"En la última ejecución, la versión candidata al lanzamiento funciona en los tres sistemas antes de finalizar el día.",2026-10-23T19:53:15
+Carlos,"Según lo acordado, la cobertura de pruebas se mantiene por encima del objetivo y dejaré el resultado documentado.",2026-10-24T11:48:45
+Ana,"En la última ejecución, confirmamos el lanzamiento cuando termine la última revisión antes de finalizar el día.",2026-10-24T12:35:00
+Elena,"En la última ejecución, el informe ya incluye el resumen de participación y actividad.",2026-10-24T14:37:45
+Carlos,"Voy a ejecutar las pruebas de integración antes de fusionar los cambios. Cuando esté listo, avisad por el canal del proyecto.",2026-10-24T15:03:45
+Luis,"Para la siguiente revisión, en la reunión repasaremos los resultados y los próximos pasos para que podamos revisarlo en equipo.",2026-10-24T17:40:00
+Elena,"Según lo acordado, el informe ya incluye el resumen de participación y actividad antes de finalizar el día.",2026-10-24T17:49:00
+Ana,"Por mi parte, ya está preparada la lista de comprobaciones del lanzamiento.",2026-10-24T18:57:00
+Ana,"Como seguimiento, falta validar una tabla del informe para cerrar la entrega.",2026-10-25T10:08:00
+Ana,ya está preparada la lista de comprobaciones del lanzamiento para que podamos revisarlo en equipo.,2026-10-25T10:47:00
+Carlos,"En la última ejecución, los temas frecuentes reflejan bien el contenido de la conversación",2026-10-25T11:17:45
+Luis,"Según lo acordado, la persistencia permite recuperar la conversación entre ejecuciones antes de finalizar el día.",2026-10-25T11:41:00
+Ana,"Por mi parte, revisaré el informe antes de compartir la versión definitiva.",2026-10-25T11:48:45
+Carlos,"Antes de cerrar, la versión candidata al lanzamiento funciona en los tres sistemas antes de finalizar el día.",2026-10-25T17:12:30
+Ana,"Antes de cerrar, la documentación de la API ya se genera automáticamente sin utilizar datos personales reales.",2026-10-25T19:13:00
+Luis,"En la última ejecución, confirmamos el lanzamiento cuando termine la última revisión sin utilizar datos personales reales.",2026-10-26T09:37:00
+Carlos,"En la última ejecución, revisamos el plan de lanzamiento en la reunión de esta tarde para que podamos revisarlo en equipo.",2026-10-26T09:58:00
+Luis,he corregido las conclusiones del informe tras la revisión antes de finalizar el día.,2026-10-26T09:58:45
+Ana,"En la última ejecución, queda repetir las pruebas en Windows antes de cerrar la versión antes de finalizar el día.",2026-10-26T10:39:00
+Luis,"Antes de cerrar, voy a revisar que la guía de uso coincida con la interfaz actual.",2026-10-26T10:42:45
+Ana,"Como seguimiento, he actualizado el informe con los últimos datos del proyecto.",2026-10-26T10:48:00
+Elena,"Para la siguiente revisión, la cobertura de pruebas se mantiene por encima del objetivo y dejaré el resultado documentado.",2026-10-26T11:47:00
+Marta,"Según lo acordado, revisaré el informe antes de compartir la versión definitiva",2026-10-26T11:49:00
+Carlos,he preparado una agenda breve para la reunión del equipo.,2026-10-26T12:20:00
+Marta,"Antes de cerrar, he actualizado las tareas pendientes para el lanzamiento final",2026-10-26T12:38:00
+Luis,"Según lo acordado, la validación de datos ha terminado sin errores y dejaré el resultado documentado.",2026-10-26T12:41:00
+Luis,revisamos el plan de lanzamiento en la reunión de esta tarde y dejaré el resultado documentado.,2026-10-26T12:59:15
+Elena,"Como seguimiento, ya está preparada la lista de comprobaciones del lanzamiento para que podamos revisarlo en equipo.",2026-10-26T13:11:00
+Elena,"Por mi parte, la versión candidata al lanzamiento funciona en los tres sistemas antes de finalizar el día.",2026-10-26T13:32:45
+Carlos,"Como seguimiento, he actualizado el informe con los últimos datos del proyecto sin utilizar datos personales reales.",2026-10-26T13:32:45
+Luis,"En la última ejecución, movemos la reunión media hora para que pueda asistir todo el equipo.",2026-10-26T13:45:00
+Ana,"Antes de cerrar, la base SQLite conserva correctamente los mensajes importados y dejaré el resultado documentado.",2026-10-26T14:32:15
+Luis,"Por mi parte, ya está preparada la lista de comprobaciones del lanzamiento",2026-10-26T15:14:00
+Marta,"En la última ejecución, he corregido las conclusiones del informe tras la revisión.",2026-10-26T16:21:45
+Pablo,"Antes de cerrar, el informe visual refleja correctamente los resultados del análisis",2026-10-26T17:23:00
+Carlos,"Para la siguiente revisión, compartiré el resumen de la reunión al terminar",2026-10-26T17:48:00
+Marta,"Según lo acordado, falta incorporar una captura del informe en la documentación para que podamos revisarlo en equipo.",2026-10-26T18:24:45
+Luis,"En la última ejecución, la documentación incluye ahora el diagrama de arquitectura y dejaré el resultado documentado.",2026-10-27T08:13:15
+Ana,"En la última ejecución, falta validar una tabla del informe para cerrar la entrega sin utilizar datos personales reales.",2026-10-27T08:55:00
+Ana,"En la última ejecución, compartiré el resumen de la reunión al terminar antes de finalizar el día.",2026-10-27T09:16:00
+Marta,"Por mi parte, el lanzamiento depende de cerrar la documentación y la demo y dejaré el resultado documentado.",2026-10-27T09:22:00
+Marta,durante la reunión podemos validar la demo completa antes de finalizar el día.,2026-10-27T10:00:00
+Luis,la cobertura de pruebas se mantiene por encima del objetivo antes de finalizar el día.,2026-10-27T10:04:00
+Ana,"Por mi parte, la reunión de seguimiento se centrará en riesgos y bloqueos.",2026-10-27T10:04:00
+Pablo,"Como seguimiento, la cobertura de pruebas se mantiene por encima del objetivo",2026-10-27T10:33:00
+Ana,"Por mi parte, revisamos el plan de lanzamiento en la reunión de esta tarde",2026-10-27T10:48:15
+Ana,"Antes de cerrar, revisaré el informe antes de compartir la versión definitiva.",2026-10-27T11:09:00
+Pablo,"Por mi parte, la documentación de la API ya se genera automáticamente.",2026-10-27T11:19:15
+Luis,"Por mi parte, la reunión de seguimiento se centrará en riesgos y bloqueos.",2026-10-27T11:29:30
+Luis,"Según lo acordado, he actualizado el informe con los últimos datos del proyecto.",2026-10-27T12:00:45
+Marta,"Como seguimiento, voy a ejecutar las pruebas de integración antes de fusionar los cambios antes de finalizar el día.",2026-10-27T12:14:15
+Ana,"Por mi parte, la documentación incluye ahora el diagrama de arquitectura sin utilizar datos personales reales.",2026-10-27T12:50:00
+Ana,"Como seguimiento, voy a revisar la eliminación segura de registros en SQLite y dejaré el resultado documentado.",2026-10-27T13:25:00
+Luis,"Para la siguiente revisión, falta validar una tabla del informe para cerrar la entrega.",2026-10-27T13:35:00
+Elena,"Como seguimiento, voy a ejecutar las pruebas de integración antes de fusionar los cambios sin utilizar datos personales reales.",2026-10-27T14:55:15
+Luis,la persistencia permite recuperar la conversación entre ejecuciones sin utilizar datos personales reales.,2026-10-27T15:02:00
+Luis,"En la última ejecución, los datos de actividad ya están preparados para la siguiente prueba antes de finalizar el día.",2026-10-27T16:53:15
+Elena,"Por mi parte, voy a revisar la eliminación segura de registros en SQLite sin utilizar datos personales reales.",2026-10-27T16:55:45
+Ana,"Según lo acordado, los datos importados coinciden con el archivo de origen sin utilizar datos personales reales.",2026-10-27T17:02:00
+Marta,"Para la siguiente revisión, voy a revisar la calidad de los datos antes del análisis.",2026-10-27T17:41:15
+Ana,"Para la siguiente revisión, he añadido un caso de prueba para la exportación del informe y dejaré el resultado documentado.",2026-10-27T18:17:45
+Ana,"En la reunión repasaremos los resultados y los próximos pasos. Cuando esté listo, avisad por el canal del proyecto.",2026-10-27T18:51:00
+Marta,"Como seguimiento, he corregido el ejemplo de ejecución en la documentación de Windows.",2026-10-27T19:30:30
+Pablo,queda repetir las pruebas en Windows antes de cerrar la versión sin utilizar datos personales reales.,2026-10-27T19:57:00
+Elena,"El resumen del análisis se ha exportado correctamente a JSON. Cuando esté listo, avisad por el canal del proyecto.",2026-10-28T08:43:45
+Luis,"Antes de cerrar, he corregido las conclusiones del informe tras la revisión sin utilizar datos personales reales.",2026-10-28T09:15:15
+Carlos,"En la última ejecución, la cobertura de pruebas se mantiene por encima del objetivo antes de finalizar el día.",2026-10-28T09:40:15
+Ana,"Por mi parte, voy a revisar la calidad de los datos antes del análisis para que podamos revisarlo en equipo.",2026-10-28T09:54:30
+Ana,"En la última ejecución, el informe visual refleja correctamente los resultados del análisis antes de finalizar el día.",2026-10-28T10:00:00
+Ana,"Antes de cerrar, queda repetir las pruebas en Windows antes de cerrar la versión sin utilizar datos personales reales.",2026-10-28T10:24:00
+Marta,"Antes de cerrar, he corregido las conclusiones del informe tras la revisión.",2026-10-28T10:35:15
+Ana,"Según lo acordado, he actualizado las tareas pendientes para el lanzamiento final.",2026-10-28T10:44:45
+Carlos,"Para la siguiente revisión, ya está preparada la lista de comprobaciones del lanzamiento y dejaré el resultado documentado.",2026-10-28T11:03:00
+Ana,"En la última ejecución, he añadido un caso de prueba para la exportación del informe sin utilizar datos personales reales.",2026-10-28T11:10:15
+Marta,"Como seguimiento, he encontrado una fila incompleta en los datos de ejemplo y dejaré el resultado documentado.",2026-10-28T11:11:00
+Ana,"Antes de cerrar, he actualizado las tareas pendientes para el lanzamiento final para que podamos revisarlo en equipo.",2026-10-28T11:12:00
+Marta,"Antes de cerrar, los datos de actividad ya están preparados para la siguiente prueba sin utilizar datos personales reales.",2026-10-28T11:19:45
+Marta,"La reunión de seguimiento se centrará en riesgos y bloqueos. Cuando esté listo, avisad por el canal del proyecto.",2026-10-28T11:26:45
+Elena,"Como seguimiento, la documentación de la API ya se genera automáticamente.",2026-10-28T11:33:30
+Marta,"Para la siguiente revisión, la participación está repartida entre varios miembros del equipo",2026-10-28T11:44:00
+Ana,"Antes de cerrar, necesitamos conservar una copia anonimizada de los datos de demostración y dejaré el resultado documentado.",2026-10-28T11:49:00
+Ana,"Antes de cerrar, he actualizado el informe con los últimos datos del proyecto antes de finalizar el día.",2026-10-28T13:12:00
+Luis,"En la última ejecución, he encontrado una fila incompleta en los datos de ejemplo para que podamos revisarlo en equipo.",2026-10-28T13:32:30
+Ana,"Antes de cerrar, he encontrado una fila incompleta en los datos de ejemplo sin utilizar datos personales reales.",2026-10-28T13:36:00
+Luis,"Por mi parte, he actualizado las tareas pendientes para el lanzamiento final.",2026-10-28T14:15:30
+Marta,"Como seguimiento, falta validar una tabla del informe para cerrar la entrega.",2026-10-28T14:27:00
+Carlos,"Como seguimiento, las pruebas del importador han terminado correctamente.",2026-10-28T14:39:00
+Pablo,"Antes de cerrar, he encontrado una fila incompleta en los datos de ejemplo antes de finalizar el día.",2026-10-28T15:26:45
+Carlos,"Como seguimiento, la prueba de persistencia confirma el alta consulta y eliminación antes de finalizar el día.",2026-10-28T15:31:00
+Pablo,"Como seguimiento, he encontrado una fila incompleta en los datos de ejemplo y dejaré el resultado documentado.",2026-10-28T15:33:00
+Luis,"Como seguimiento, el informe ya incluye el resumen de participación y actividad y dejaré el resultado documentado.",2026-10-28T16:01:00
+Elena,"Para la siguiente revisión, la validación de datos ha terminado sin errores",2026-10-28T16:20:00
+Luis,"Por mi parte, los datos importados coinciden con el archivo de origen sin utilizar datos personales reales.",2026-10-28T16:38:00
+Marta,"Según lo acordado, las pruebas del importador han terminado correctamente sin utilizar datos personales reales.",2026-10-28T16:42:15
+Ana,el análisis de actividad por fecha ya aparece en el informe visual y dejaré el resultado documentado.,2026-10-28T16:42:45
+Ana,"Según lo acordado, revisaré el informe antes de compartir la versión definitiva antes de finalizar el día.",2026-10-28T16:48:00
+Ana,compartiré el resumen de la reunión al terminar.,2026-10-28T16:53:00
+Elena,"Por mi parte, la participación está repartida entre varios miembros del equipo y dejaré el resultado documentado.",2026-10-28T16:57:00
+Carlos,"Por mi parte, voy a ejecutar las pruebas de integración antes de fusionar los cambios y dejaré el resultado documentado.",2026-10-28T17:27:15
+Ana,"Como seguimiento, los temas frecuentes reflejan bien el contenido de la conversación.",2026-10-28T17:30:00
+Marta,la validación de datos ha terminado sin errores antes de finalizar el día.,2026-10-28T17:39:15
+Elena,"El informe ya incluye el resumen de participación y actividad. Cuando esté listo, avisad por el canal del proyecto.",2026-10-28T18:14:00
+Luis,"Según lo acordado, he corregido el ejemplo de ejecución en la documentación de Windows antes de finalizar el día.",2026-10-28T18:17:15
+Luis,"Como seguimiento, he corregido las conclusiones del informe tras la revisión antes de finalizar el día.",2026-10-28T18:30:15
+Pablo,"Para la siguiente revisión, he ampliado la documentación con instrucciones de instalación sin utilizar datos personales reales.",2026-10-29T08:36:30
+Ana,"Como seguimiento, en la reunión repasaremos los resultados y los próximos pasos para que podamos revisarlo en equipo.",2026-10-29T09:33:00
+Ana,necesitamos conservar una copia anonimizada de los datos de demostración sin utilizar datos personales reales.,2026-10-29T09:33:30
+Carlos,"Según lo acordado, voy a ejecutar las pruebas de integración antes de fusionar los cambios antes de finalizar el día.",2026-10-29T09:58:00
+Ana,"Según lo acordado, la validación de datos ha terminado sin errores para que podamos revisarlo en equipo.",2026-10-29T10:00:30
+Ana,"Antes de cerrar, la cobertura de pruebas se mantiene por encima del objetivo",2026-10-29T10:03:00
+Marta,"En la última ejecución, el análisis temporal muestra un pico de actividad por la mañana sin utilizar datos personales reales.",2026-10-29T10:07:00
+Luis,"Voy a revisar la calidad de los datos antes del análisis. Cuando esté listo, avisad por el canal del proyecto.",2026-10-29T10:36:00
+Marta,"Como seguimiento, en la reunión repasaremos los resultados y los próximos pasos sin utilizar datos personales reales.",2026-10-29T10:45:00
+Marta,"Antes de cerrar, necesitamos conservar una copia anonimizada de los datos de demostración",2026-10-29T11:43:00
+Ana,las pruebas del importador han terminado correctamente para que podamos revisarlo en equipo.,2026-10-29T11:54:15
+Marta,"Según lo acordado, la participación está repartida entre varios miembros del equipo antes de finalizar el día.",2026-10-29T11:57:00
+Ana,"Como seguimiento, el informe ya incluye el resumen de participación y actividad sin utilizar datos personales reales.",2026-10-29T12:07:15
+Marta,"Como seguimiento, la persistencia permite recuperar la conversación entre ejecuciones antes de finalizar el día.",2026-10-29T12:11:00
+Luis,los temas frecuentes reflejan bien el contenido de la conversación,2026-10-29T12:28:00
+Ana,"Por mi parte, movemos la reunión media hora para que pueda asistir todo el equipo y dejaré el resultado documentado.",2026-10-29T12:52:00
+Pablo,necesitamos conservar una copia anonimizada de los datos de demostración para que podamos revisarlo en equipo.,2026-10-29T12:53:30
+Elena,"Antes de cerrar, la base SQLite conserva correctamente los mensajes importados antes de finalizar el día.",2026-10-29T13:16:15
+Pablo,"En la última ejecución, he añadido un caso de prueba para la exportación del informe",2026-10-29T13:39:45
+Carlos,"Para la siguiente revisión, voy a ejecutar las pruebas de integración antes de fusionar los cambios.",2026-10-29T13:41:00
+Ana,"En la última ejecución, la prueba de persistencia confirma el alta consulta y eliminación y dejaré el resultado documentado.",2026-10-29T13:43:00
+Ana,he preparado una agenda breve para la reunión del equipo.,2026-10-29T14:06:00
+Pablo,"Como seguimiento, he actualizado el informe con los últimos datos del proyecto",2026-10-29T14:15:00
+Carlos,"En la última ejecución, durante la reunión podemos validar la demo completa y dejaré el resultado documentado.",2026-10-29T14:44:45
+Elena,"Para la siguiente revisión, el informe visual refleja correctamente los resultados del análisis antes de finalizar el día.",2026-10-29T15:33:00
+Luis,"Para la siguiente revisión, la documentación de la API ya se genera automáticamente para que podamos revisarlo en equipo.",2026-10-29T15:33:00
+Ana,el repositorio de persistencia ya controla identificadores inexistentes,2026-10-29T15:51:15
+Ana,"Para la siguiente revisión, ya está preparada la lista de comprobaciones del lanzamiento sin utilizar datos personales reales.",2026-10-29T16:27:00
+Carlos,"Para la siguiente revisión, el informe visual refleja correctamente los resultados del análisis.",2026-10-29T16:27:15
+Ana,"Según lo acordado, falta incorporar una captura del informe en la documentación.",2026-10-29T16:31:15
+Marta,"Para la siguiente revisión, en la reunión repasaremos los resultados y los próximos pasos.",2026-10-29T16:47:00
+Luis,"Como seguimiento, la documentación incluye ahora el diagrama de arquitectura",2026-10-29T16:56:45
+Luis,"Antes de cerrar, he comprobado que todas las conexiones de persistencia se cierran.",2026-10-29T17:01:00
+Elena,"En la última ejecución, el informe visual refleja correctamente los resultados del análisis y dejaré el resultado documentado.",2026-10-29T17:14:30
+Luis,falta incorporar una captura del informe en la documentación y dejaré el resultado documentado.,2026-10-29T17:25:45
+Ana,"Según lo acordado, la cobertura de pruebas se mantiene por encima del objetivo",2026-10-29T17:29:30
+Carlos,"Por mi parte, la documentación de la API ya se genera automáticamente.",2026-10-29T17:32:15
+Luis,"Como seguimiento, he actualizado el informe con los últimos datos del proyecto",2026-10-29T17:35:45
+Carlos,"En la última ejecución, he corregido el ejemplo de ejecución en la documentación de Windows para que podamos revisarlo en equipo.",2026-10-29T17:36:00
+Luis,"En la última ejecución, he actualizado las tareas pendientes para el lanzamiento final para que podamos revisarlo en equipo.",2026-10-29T17:38:30
+Elena,"Según lo acordado, el repositorio de persistencia ya controla identificadores inexistentes antes de finalizar el día.",2026-10-29T17:41:00
+Elena,"Por mi parte, he encontrado una fila incompleta en los datos de ejemplo para que podamos revisarlo en equipo.",2026-10-29T17:47:00
+Carlos,"Antes de cerrar, voy a revisar que la guía de uso coincida con la interfaz actual",2026-10-29T18:19:00
+Elena,"Para la siguiente revisión, el lanzamiento depende de cerrar la documentación y la demo",2026-10-29T18:28:00
+Ana,voy a revisar la calidad de los datos antes del análisis sin utilizar datos personales reales.,2026-10-29T18:32:00
+Pablo,"Antes de cerrar, revisaré el informe antes de compartir la versión definitiva para que podamos revisarlo en equipo.",2026-10-29T18:36:30
+Elena,"Antes de cerrar, he corregido las conclusiones del informe tras la revisión antes de finalizar el día.",2026-10-29T18:38:00
+Ana,"En la última ejecución, la documentación incluye ahora el diagrama de arquitectura antes de finalizar el día.",2026-10-29T18:56:00
+Ana,he ampliado la documentación con instrucciones de instalación y dejaré el resultado documentado.,2026-10-30T09:38:15
+Ana,"Antes de cerrar, el lanzamiento depende de cerrar la documentación y la demo sin utilizar datos personales reales.",2026-10-30T09:39:00
+Ana,"Para la siguiente revisión, el informe ya incluye el resumen de participación y actividad para que podamos revisarlo en equipo.",2026-10-30T09:54:15
+Luis,"Por mi parte, queda repetir las pruebas en Windows antes de cerrar la versión.",2026-10-30T10:02:15
+Ana,"Antes de cerrar, el repositorio de persistencia ya controla identificadores inexistentes sin utilizar datos personales reales.",2026-10-30T10:22:00
+Marta,"Según lo acordado, la documentación de la API ya se genera automáticamente antes de finalizar el día.",2026-10-30T10:37:15
+Ana,"Como seguimiento, los datos de actividad ya están preparados para la siguiente prueba",2026-10-30T12:59:00
+Elena,"Por mi parte, confirmamos el lanzamiento cuando termine la última revisión antes de finalizar el día.",2026-10-30T13:17:00
+Ana,"Antes de cerrar, el informe ya incluye el resumen de participación y actividad.",2026-10-30T13:21:30
+Pablo,voy a revisar que la guía de uso coincida con la interfaz actual.,2026-10-30T13:53:15
+Luis,"Por mi parte, la documentación de la API ya se genera automáticamente y dejaré el resultado documentado.",2026-10-30T14:19:00
+Carlos,"Antes de cerrar, el informe ya incluye el resumen de participación y actividad",2026-10-30T14:50:45
+Elena,"Según lo acordado, queda repetir las pruebas en Windows antes de cerrar la versión y dejaré el resultado documentado.",2026-10-30T14:54:00
+Elena,"Por mi parte, he comprobado que todas las conexiones de persistencia se cierran antes de finalizar el día.",2026-10-30T15:05:15
+Ana,"Antes de cerrar, revisaré el informe antes de compartir la versión definitiva",2026-10-30T16:06:15
+Marta,los datos importados coinciden con el archivo de origen,2026-10-30T16:19:45
+Marta,"Por mi parte, necesitamos conservar una copia anonimizada de los datos de demostración sin utilizar datos personales reales.",2026-10-30T16:57:00
+Pablo,"Según lo acordado, revisamos el plan de lanzamiento en la reunión de esta tarde sin utilizar datos personales reales.",2026-10-30T17:28:15
+Elena,el informe ya incluye el resumen de participación y actividad para que podamos revisarlo en equipo.,2026-10-30T17:31:30
+Luis,"Como seguimiento, el repositorio de persistencia ya controla identificadores inexistentes",2026-10-30T17:42:15
+Ana,"Por mi parte, la validación de datos ha terminado sin errores y dejaré el resultado documentado.",2026-10-30T19:01:00
+Marta,"Como seguimiento, el repositorio de persistencia ya controla identificadores inexistentes antes de finalizar el día.",2026-10-31T09:58:00
+Pablo,"Por mi parte, he corregido el ejemplo de ejecución en la documentación de Windows.",2026-10-31T15:11:30
+Luis,"Antes de cerrar, las pruebas del importador han terminado correctamente para que podamos revisarlo en equipo.",2026-11-01T12:06:30
+Luis,"Antes de cerrar, las pruebas de persistencia cubren el ciclo completo de la conversación y dejaré el resultado documentado.",2026-11-01T14:29:15

@@ -7,12 +7,13 @@ import json
 import logging
 from collections.abc import Sequence
 
+from . import __version__
 from .analysis import Analizador
 from .errors import ErrorAplicacion
 from .importers import Importador, ImportadorCSV
 from .logging_config import configurar_logging
 from .persistence import RepositorioSQLite
-from .reporting import exportar_mensajes_csv, exportar_resumen
+from .reporting import exportar_informe_html, exportar_mensajes_csv, exportar_resumen
 
 logger = logging.getLogger(__name__)
 
@@ -22,6 +23,7 @@ def crear_parser() -> argparse.ArgumentParser:
         prog="analizador-redes",
         description="Importa, persiste y analiza conversaciones exportadas.",
     )
+    parser.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
     parser.add_argument("--db", default="datos/conversaciones.sqlite3",
                         help="ruta de SQLite (por defecto: %(default)s)")
     parser.add_argument("--log-file", help="guardar también el log en este fichero")
@@ -42,6 +44,7 @@ def crear_parser() -> argparse.ArgumentParser:
     analizar.add_argument("id", type=_entero_positivo)
     analizar.add_argument("--top", type=_entero_positivo, default=10)
     analizar.add_argument("-o", "--salida", help="guardar el resumen como JSON")
+    analizar.add_argument("--html", help="guardar un informe visual HTML autocontenido")
 
     exportar = subparsers.add_parser("exportar", help="exportar mensajes normalizados a CSV")
     exportar.add_argument("id", type=_entero_positivo)
@@ -87,7 +90,10 @@ def ejecutar(args: argparse.Namespace, importador: Importador | None = None) -> 
         if args.salida:
             destino = exportar_resumen(resumen, args.salida)
             print(f"Informe guardado en {destino}")
-        else:
+        if args.html:
+            destino_visual = exportar_informe_html(resumen, args.html)
+            print(f"Informe visual guardado en {destino_visual}")
+        if not args.salida and not args.html:
             print(json.dumps(resumen, ensure_ascii=False, indent=2))
         return 0
 
