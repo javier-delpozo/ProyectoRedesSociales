@@ -7,6 +7,7 @@ import json
 import logging
 from collections.abc import Sequence
 
+from . import __version__
 from .analysis import Analizador
 from .errors import ErrorAplicacion
 from .importers import Importador, ImportadorCSV
@@ -22,6 +23,7 @@ def crear_parser() -> argparse.ArgumentParser:
         prog="analizador-redes",
         description="Importa, persiste y analiza conversaciones exportadas.",
     )
+    parser.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
     parser.add_argument("--db", default="datos/conversaciones.sqlite3",
                         help="ruta de SQLite (por defecto: %(default)s)")
     parser.add_argument("--log-file", help="guardar también el log en este fichero")

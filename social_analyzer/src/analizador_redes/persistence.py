@@ -146,12 +146,8 @@ class RepositorioSQLite:
         finally:
             conexion.close()
 
-    
     def _conectar(self) -> sqlite3.Connection:
-        """Crea y configura una conexión SQLite."""
-
         conexion = sqlite3.connect(self.ruta)
         conexion.row_factory = sqlite3.Row
         conexion.execute("PRAGMA foreign_keys = ON")
-
         return conexion

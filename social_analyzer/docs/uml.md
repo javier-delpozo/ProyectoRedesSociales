@@ -1,4 +1,4 @@
-# UML de PRAC3
+# UML de la versión 1.0.0
 
 El diagrama refleja la arquitectura implementada en `src/analizador_redes`. Las relaciones de composición muestran que la fachada `Analizador` coordina servicios especializados, pero no implementa sus algoritmos.
 

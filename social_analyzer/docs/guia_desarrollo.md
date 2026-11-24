@@ -14,7 +14,7 @@ El proyecto separa responsabilidades por capas:
 
 La CLI depende del contrato `Importador`, no del algoritmo de lectura. La fachada `Analizador` delega en `AnalizadorParticipacion`, `AnalizadorTemas` y `AnalizadorTemporal`. El dominio no conoce CSV, SQLite, `argparse` ni formatos de informe.
 
-El [UML de PRAC3](uml.md) documenta clases y relaciones.
+El [UML de la versión 1.0.0](uml.md) documenta clases y relaciones.
 
 ## 2. Preparar el entorno
 
@@ -34,7 +34,7 @@ python -m analizador_redes --help
 analizador-redes --help
 ```
 
-La configuración de `pyproject.toml` activa cobertura de líneas y ramas, muestra líneas no cubiertas y exige al menos 55 %. El objetivo es mantener margen por encima del umbral.
+La configuración de `pyproject.toml` activa cobertura de líneas y ramas, muestra líneas no cubiertas y exige al menos 70 %.
 
 ## 4. Principios OO aplicados
 
@@ -123,9 +123,17 @@ Usa `logging.getLogger(__name__)` en cada módulo. Evita datos personales o cont
 
 No uses una base compartida entre pruebas. Evita depender del reloj o de la red.
 
-## 12. Flujo Git recomendado
+## 12. Compatibilidad y release
 
-1. Crea una rama breve, por ejemplo `feature/prac3-arquitectura`.
+- La CI ejecuta Python 3.10 y 3.12 en Windows, macOS y Linux.
+- `python scripts/demo.py` evita comandos específicos del sistema operativo.
+- `python scripts/generar_documentacion.py` produce la referencia API HTML.
+- `python -m build` crea el wheel y el sdist antes de publicar.
+- La etiqueta `v1.0.0` se crea solo después de que `main` pase la CI.
+
+## 13. Flujo Git recomendado
+
+1. Crea una rama breve, por ejemplo `release/prac4-v1.0.0`.
 2. Realiza commits pequeños por responsabilidad.
 3. Ejecuta estilo, pruebas, cobertura y comprobación de `ResourceWarning`.
 4. Abre una PR con alcance, decisiones y evidencia de calidad.
