@@ -5,6 +5,7 @@
 | Requisito | Evidencia preparada |
 |---|---|
 | Funcionalidades cerradas | CLI completa, demo reproducible y limitaciones explícitas |
+| Informe visual del guion inicial | `--html`, panel autocontenido y prueba de escape de contenido |
 | Cobertura >=70 % | Umbral `--cov-fail-under=70` y `fail_under=70` en `pyproject.toml` |
 | Al menos una integración | `tests/test_cli.py::test_flujo_cli_completo`, marcada `integration` |
 | API + guía de uso | pdoc generable, `docs/guia_usuario.md` y script multiplataforma |
@@ -17,7 +18,11 @@
 
 La evaluación de seguimiento calificó el proyecto como sólido, consistente y bien alineado entre documentación, arquitectura e implementación. Destacó la persistencia SQLite, la separación de analizadores, la claridad del código y las pruebas de comportamientos completos. También aconsejó no crecer por crecer, mantener las pruebas, preservar la simplicidad y distinguir claramente lo implementado de las extensiones futuras.
 
-Por ese motivo, PRAC4 no añade un segundo formato de entrada ni análisis semántico. Cierra una versión fiable con mejor reproducibilidad, documentación publicable, CI multiplataforma, materiales de exposición y controles de release.
+Por ese motivo, PRAC4 no añade un segundo formato de entrada ni análisis semántico. Sí cubre el único
+hueco funcional directo del guion inicial: un informe visual ligero. Se implementa como HTML estático
+autocontenido para evitar un servidor, una GUI o dependencias gráficas de plataforma. La versión cierra
+así un flujo fiable con mejor reproducibilidad, documentación publicable, CI multiplataforma,
+materiales de exposición y controles de release.
 
 ## Validación esperada en un clon limpio
 

@@ -11,6 +11,7 @@ Los cambios relevantes se documentan aquí siguiendo Keep a Changelog y versiona
 - Comprobación explícita de versión desde la CLI con `--version`.
 - Materiales de exposición, coevaluación y registro de contribuciones para PRAC4.
 - Matriz de integración continua en Windows, macOS y Linux.
+- Informe visual HTML autocontenido con participación, temas y actividad temporal.
 
 ### Cambiado
 

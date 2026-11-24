@@ -10,7 +10,8 @@ La versión 1.0.0 cierra el alcance con:
 - importador abstracto y una implementación CSV sustituible;
 - persistencia SQLite transaccional con cierre garantizado de conexiones;
 - análisis por componentes especializados y fachada pública estable;
-- salidas JSON/CSV, logging y errores controlados;
+- salidas JSON/CSV y un informe visual HTML autocontenido;
+- logging y errores controlados;
 - suite automatizada con una prueba de integración extremo a extremo y umbral mínimo de cobertura del **70 %**;
 - CI en Windows, macOS y Linux;
 - documentación API generable, guía de uso, demo reproducible y materiales de exposición.
@@ -77,11 +78,24 @@ python -m analizador_redes --version
 python -m analizador_redes validar ejemplos/conversacion.csv
 python -m analizador_redes --db build/demo.sqlite3 importar ejemplos/conversacion.csv --nombre Demo
 python -m analizador_redes --db build/demo.sqlite3 listar
-python -m analizador_redes --db build/demo.sqlite3 analizar 1 --top 5 -o build/resumen.json
+python -m analizador_redes --db build/demo.sqlite3 analizar 1 --top 5 -o build/resumen.json --html build/informe.html
 python -m analizador_redes --db build/demo.sqlite3 exportar 1 build/mensajes.csv
 ```
 
 La instalación añade el comando equivalente `analizador-redes`.
+
+## Informe visual
+
+La opción `--html` genera un panel estático con resumen, participación, temas frecuentes y actividad
+temporal. El fichero incluye sus estilos, no necesita JavaScript, funciona sin conexión y puede abrirse
+en cualquier navegador moderno de Windows, macOS o Linux.
+
+```bash
+python -m analizador_redes --db datos/conversaciones.sqlite3 analizar 1 \
+  --html informes/conversacion.html
+```
+
+Se puede combinar `--html` con `-o` para conservar a la vez el informe visual y el JSON reutilizable.
 
 ## Formato de entrada
 
@@ -95,6 +109,12 @@ Luis,El informe está listo,2026-10-30T10:15:00+01:00
 
 Se permiten columnas adicionales. Una fila inválida detiene la importación y el error identifica la fila.
 
+### Dataset de demostración
+
+El repositorio incluye un conjunto de datos completamente sintético para la demostración, formado por 300 mensajes de 6 participantes distribuidos a lo largo de 14 días.
+
+Los datos no proceden de conversaciones reales y no contienen información personal.
+
 ## Arquitectura
 
 ```text
@@ -103,7 +123,7 @@ CSV -> Importador (ABC) -> Conversacion -> Analizador (fachada)
                                              |-- AnalizadorTemas
                                              `-- AnalizadorTemporal
                    |-> RepositorioSQLite
-                   `-> reporting JSON/CSV
+                   `-> reporting JSON/CSV/HTML
 ```
 
 `Analizador` conserva una API sencilla y delega los cálculos. `ImportadorCSV` implementa el contrato `Importador`, de forma que otro formato podría añadirse sin acoplar el dominio ni la persistencia. Consulta el [UML completo](docs/uml.md).
@@ -125,6 +145,7 @@ python -W error::ResourceWarning -m pytest
 - [Guía de desarrollo](docs/guia_desarrollo.md)
 - [UML](docs/uml.md)
 - [Evidencias de PRAC4](docs/prac4.md)
+- [Auditoría final y matriz de cumplimiento](docs/auditoria_prac4.md)
 - [Guion de exposición](docs/guion_presentacion.md)
 - [Coevaluación](docs/coevaluacion.md)
 - [Checklist de entrega](docs/checklist_entrega.md)
@@ -147,15 +168,8 @@ El historial Git es la fuente objetiva para el recuento de commits:
 python scripts/generar_contribuciones.py
 ```
 
-El comando genera `docs/contribuciones_generadas.md`. La tabla cualitativa debe revisarse en grupo: el número de commits no determina por sí solo esfuerzo ni calidad.
-
-
-| Miembro | Participación |
-|---|---|
-| Carlos Anguita Rodríguez | Participación en el trabajo y revisión conjunta del proyecto. |
-| Javier del Pozo Pérez | Desarrollo e integración del repositorio, pruebas automatizadas y preparación de la entrega final. |
-| Nicolás García Macías | Participación en el trabajo y revisión conjunta del proyecto. |
-| Quanan Wei | Participación en el trabajo y revisión conjunta del proyecto. |
+El comando genera `docs/contribuciones_generadas.md`. La tabla cualitativa debe revisarse en grupo:
+el número de commits no determina por sí solo esfuerzo ni calidad y no se atribuyen tareas sin evidencia.
 
 ## Publicación de v1.0.0
 
@@ -174,3 +188,10 @@ No se incluye una etiqueta dentro del ZIP porque las etiquetas pertenecen al his
 - El análisis de temas usa frecuencias normalizadas, no NLP semántico.
 - SQLite está orientado a uso local y volúmenes pequeños o medianos.
 - Las conversaciones reales pueden contener datos personales; deben anonimizarse antes de compartirlas.
+
+## Atribuciones
+
+Durante la preparación se utilizaron asistentes de IA para revisar documentación, proponer casos de
+prueba, depurar compatibilidad multiplataforma y mejorar el informe y la presentación. El equipo revisó
+el código resultante y conserva la responsabilidad completa sobre su funcionamiento, estructura,
+seguridad y posibles errores, conforme a la política de la asignatura.

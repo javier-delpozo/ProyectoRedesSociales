@@ -13,6 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DEMO_DIR = ROOT / "build" / "demo"
 DB = DEMO_DIR / "demo.sqlite3"
 REPORT = DEMO_DIR / "resumen.json"
+VISUAL_REPORT = DEMO_DIR / "informe.html"
 EXPORT = DEMO_DIR / "mensajes.csv"
 INPUT = ROOT / "ejemplos" / "conversacion.csv"
 
@@ -45,12 +46,24 @@ def main() -> int:
     run("validar", str(INPUT))
     run("--db", str(DB), "importar", str(INPUT), "--nombre", "Demo PRAC4")
     run("--db", str(DB), "listar")
-    run("--db", str(DB), "analizar", "1", "--top", "5", "-o", str(REPORT))
+    run(
+        "--db",
+        str(DB),
+        "analizar",
+        "1",
+        "--top",
+        "5",
+        "-o",
+        str(REPORT),
+        "--html",
+        str(VISUAL_REPORT),
+    )
     run("--db", str(DB), "exportar", "1", str(EXPORT))
 
     data = json.loads(REPORT.read_text(encoding="utf-8"))
     assert data["total_mensajes"] > 0
     assert EXPORT.exists()
+    assert VISUAL_REPORT.exists()
     print(f"\nDemo completada. Artefactos: {DEMO_DIR.relative_to(ROOT)}")
     return 0
 

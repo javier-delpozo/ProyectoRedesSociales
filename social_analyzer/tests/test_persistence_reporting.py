@@ -6,7 +6,11 @@ import pytest
 
 from analizador_redes.errors import ConversacionNoEncontrada
 from analizador_redes.persistence import RepositorioSQLite
-from analizador_redes.reporting import exportar_mensajes_csv, exportar_resumen
+from analizador_redes.reporting import (
+    exportar_informe_html,
+    exportar_mensajes_csv,
+    exportar_resumen,
+)
 
 
 def test_repositorio_ciclo_completo(tmp_path, conversacion):
@@ -60,3 +64,27 @@ def test_exportadores(tmp_path, conversacion):
     assert len(filas) == 3
     assert filas[0]["autor"] == "Ana"
     assert filas[0]["fecha"].startswith("2026-10-30T09:00")
+
+
+def test_informe_visual_autocontenido_y_seguro(tmp_path):
+    resumen = {
+        "nombre": "Equipo <demo>",
+        "total_mensajes": 4,
+        "total_participantes": 2,
+        "participacion": [
+            {"usuario": "Ana", "mensajes": 3, "porcentaje": 75.0, "longitud_media": 8.0},
+            {"usuario": "Luis", "mensajes": 1, "porcentaje": 25.0, "longitud_media": 9.0},
+        ],
+        "temas": [{"termino": "informe", "frecuencia": 3}],
+        "actividad_por_fecha": {"2026-10-30": 4},
+        "actividad_por_hora": {"09:00": 2, "10:00": 2},
+    }
+
+    destino = exportar_informe_html(resumen, tmp_path / "informe.html")
+    contenido = destino.read_text(encoding="utf-8")
+
+    assert "Equipo &lt;demo&gt;" in contenido
+    assert "Participación" in contenido
+    assert "Temas frecuentes" in contenido
+    assert "Actividad temporal" in contenido
+    assert "<script" not in contenido

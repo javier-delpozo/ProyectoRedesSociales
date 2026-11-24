@@ -8,7 +8,7 @@ El proyecto separa responsabilidades por capas:
 - `importers.py`: contrato abstracto `Importador` y adaptador concreto `ImportadorCSV`.
 - `analysis.py`: analizadores especializados y fachada de compatibilidad `Analizador`.
 - `persistence.py`: repositorio SQLite, esquema y ciclo de vida de conexiones.
-- `reporting.py`: adaptadores de salida JSON y CSV.
+- `reporting.py`: adaptadores de salida JSON, CSV e informe visual HTML.
 - `cli.py`: composición de dependencias y experiencia de terminal.
 - `errors.py` y `logging_config.py`: tratamiento transversal de fallos y trazas.
 
@@ -118,6 +118,7 @@ Usa `logging.getLogger(__name__)` en cada módulo. Evita datos personales o cont
 - **Unitarias:** dominio y analizadores con objetos en memoria.
 - **Arquitectura:** abstracción, herencia, sobrescritura, inyección y polimorfismo.
 - **Adaptadores:** CSV y SQLite con `tmp_path`.
+- **Reporting:** JSON/CSV e HTML autocontenido, con escape de texto aportado por el usuario.
 - **Integración:** `cli.main([...])` con base y ficheros temporales.
 - **Regresión:** cada fallo corregido deja una prueba que falla antes del arreglo.
 

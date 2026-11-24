@@ -4,10 +4,10 @@
 
 - [x] `pytest` termina correctamente y la cobertura es >=70 %.
 - [x] `pytest -m integration` ejecuta al menos una prueba de integración.
-- [x] `ruff check .` no informa de errores.
+- [ ] `ruff check .` no informa de errores.
 - [x] `python -m build` genera sdist y wheel.
 - [x] `python scripts/demo.py` completa todo el flujo.
-- [x] `python scripts/generar_documentacion.py` genera `build/docs/api`.
+- [ ] `python scripts/generar_documentacion.py` genera `build/docs/api`.
 - [ ] La CI pasa en Windows, macOS y Linux.
 
 ## Documentación y exposición
@@ -16,8 +16,9 @@
 - [x] CHANGELOG incluye v1.0.0.
 - [x] Diapositivas y guion caben en 8-10 minutos.
 - [x] Hay plan B de demo y no se usan datos personales reales.
-- [x] `python scripts/generar_contribuciones.py` se ejecutó en el clon con historial Git.
-- [ ] Cada miembro completó su coevaluación.
+- [x] `build/demo/informe.html` contiene participación, temas y actividad temporal.
+- [ ] `python scripts/generar_contribuciones.py` se ejecutó en el clon con historial Git.
+- [ ] Cada miembro completó su coevaluación sin inventar datos.
 
 ## Git y publicación
 

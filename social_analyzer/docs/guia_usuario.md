@@ -78,6 +78,17 @@ python -m analizador_redes --db datos/conversaciones.sqlite3 \
 
 El resumen contiene número de mensajes y participantes, participación porcentual, longitud media, términos frecuentes y actividad por fecha y hora.
 
+Guardar además un informe visual autocontenido:
+
+```bash
+python -m analizador_redes --db datos/conversaciones.sqlite3 \
+  analizar 1 --top 15 -o informes/grupo.json --html informes/grupo.html
+```
+
+El HTML muestra barras de participación y temas, actividad por fecha y hora y dos indicadores de
+resumen. Se abre directamente en un navegador, no carga recursos externos y se adapta a pantalla e
+impresión.
+
 ### Exportar mensajes normalizados
 
 ```bash
@@ -126,4 +137,5 @@ python scripts/demo.py
 python scripts/generar_documentacion.py
 ```
 
-La demo escribe únicamente en `build/demo`. La documentación API queda en `build/docs/api`.
+La demo escribe únicamente en `build/demo`: base SQLite, JSON, CSV e `informe.html`. La documentación
+API queda en `build/docs/api`.

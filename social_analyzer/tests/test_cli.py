@@ -30,8 +30,24 @@ def test_flujo_cli_completo(tmp_path, capsys):
     assert resumen["total_mensajes"] == 2
 
     informe = tmp_path / "informe.json"
-    assert main(["--db", str(db), "analizar", "1", "-o", str(informe)]) == 0
+    informe_html = tmp_path / "informe.html"
+    assert (
+        main(
+            [
+                "--db",
+                str(db),
+                "analizar",
+                "1",
+                "-o",
+                str(informe),
+                "--html",
+                str(informe_html),
+            ]
+        )
+        == 0
+    )
     assert informe.exists()
+    assert informe_html.exists()
 
     exportado = tmp_path / "mensajes.csv"
     assert main(["--db", str(db), "exportar", "1", str(exportado)]) == 0
