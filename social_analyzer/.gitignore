@@ -14,3 +14,6 @@ informes/
 exportaciones/
 dist/
 build/
+docs/*.html
+docs/search.js
+~$*
