@@ -86,16 +86,43 @@ La instalación añade el comando equivalente `analizador-redes`.
 
 ## Informe visual
 
-La opción `--html` genera un panel estático con resumen, participación, temas frecuentes y actividad
-temporal. El fichero incluye sus estilos, no necesita JavaScript, funciona sin conexión y puede abrirse
-en cualquier navegador moderno de Windows, macOS o Linux.
+La opción `--html` genera un informe visual estático con:
 
-```bash
-python -m analizador_redes --db datos/conversaciones.sqlite3 analizar 1 \
-  --html informes/conversacion.html
+- número total de mensajes;
+- número de participantes;
+- distribución de participación;
+- temas frecuentes;
+- actividad temporal.
+
+Por ejemplo:
+
+```powershell
+python -m analizador_redes --db build/demo/demo.sqlite3 analizar 1 `
+    --top 5 `
+    -o build/demo/resumen.json `
+    --html build/demo/informe.html
 ```
 
-Se puede combinar `--html` con `-o` para conservar a la vez el informe visual y el JSON reutilizable.
+Después puede abrirse directamente en Windows:
+
+```powershell
+Start-Process ".\build\demo\informe.html"
+```
+
+En macOS:
+
+```bash
+open build/demo/informe.html
+```
+
+En Linux:
+
+```bash
+xdg-open build/demo/informe.html
+```
+
+El HTML es un **artefacto generado por la aplicación Python**, no una aplicación web independiente. Es autocontenido, funciona sin servidor y no necesita recursos externos.
+
 
 ## Formato de entrada
 

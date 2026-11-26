@@ -18,106 +18,6 @@ La versión 1.0.0 cierra el alcance con:
 
 El feedback de PRAC3 recomendó consolidar la calidad y preservar la simplicidad antes que añadir funcionalidades sin una necesidad clara. La entrega final sigue esa recomendación: endurece pruebas, documentación, reproducibilidad y compatibilidad multiplataforma sin sobreingeniería.
 
-# UML de la versión 1.0.0
-
-El diagrama refleja la arquitectura implementada en `src/analizador_redes`. Las relaciones de composición muestran que la fachada `Analizador` coordina servicios especializados, pero no implementa sus algoritmos.
-
-```mermaid
-classDiagram
-    direction LR
-
-    class Importador {
-        <<abstract>>
-        +importar(ruta, nombre) Conversacion*
-        +validar_ruta(ruta) Path
-    }
-
-    class ImportadorCSV {
-        +COLUMNAS set
-        +importar(ruta, nombre) Conversacion
-        -_crear_mensaje(fila, numero_linea) Mensaje
-    }
-
-    class Usuario {
-        +nombre str
-    }
-
-    class Mensaje {
-        +autor Usuario
-        +contenido str
-        +fecha datetime
-    }
-
-    class Conversacion {
-        +id int?
-        +nombre str
-        +mensajes list~Mensaje~
-        +participantes tuple~Usuario~
-        +agregar(mensaje)
-    }
-
-    class AnalizadorParticipacion {
-        +analizar(conversacion) list~Participacion~
-    }
-
-    class AnalizadorTemas {
-        +analizar(conversacion, limite) list
-    }
-
-    class AnalizadorTemporal {
-        +por_fecha(conversacion) dict
-        +por_hora(conversacion) dict
-    }
-
-    class Analizador {
-        -_participacion AnalizadorParticipacion
-        -_temas AnalizadorTemas
-        -_temporal AnalizadorTemporal
-        +participacion(conversacion) list
-        +temas(conversacion, limite) list
-        +actividad_por_fecha(conversacion) dict
-        +actividad_por_hora(conversacion) dict
-        +resumen(conversacion, limite) dict
-    }
-
-    class RepositorioSQLite {
-        +ruta Path
-        +inicializar()
-        +guardar(conversacion) int
-        +obtener(id) Conversacion
-        +listar() list
-        +eliminar(id)
-        -_conexion() Iterator~Connection~
-    }
-
-    class CLI {
-        +ejecutar(args, importador) int
-        +main(argv) int
-    }
-
-    Importador <|-- ImportadorCSV : herencia y sobrescritura
-    ImportadorCSV ..> Conversacion : crea
-    Conversacion "1" *-- "0..*" Mensaje
-    Mensaje "0..*" --> "1" Usuario
-    Analizador *-- AnalizadorParticipacion
-    Analizador *-- AnalizadorTemas
-    Analizador *-- AnalizadorTemporal
-    RepositorioSQLite ..> Conversacion : persiste
-    CLI ..> Importador : usa polimórficamente
-    CLI ..> Analizador
-    CLI ..> RepositorioSQLite
-```
-
-## Decisiones representadas
-
-- **Abstracción:** `Importador` define el contrato común y no puede instanciarse.
-- **Herencia y sobrescritura:** `ImportadorCSV` hereda de `Importador` e implementa `importar`.
-- **Polimorfismo:** `cli.ejecutar` recibe opcionalmente cualquier `Importador`; la implementación CSV es solo el valor por defecto.
-- **Responsabilidad única:** los algoritmos de participación, temas y tiempo viven en analizadores separados.
-- **Compatibilidad:** `Analizador` sigue ofreciendo los métodos públicos de PRAC2 y actúa únicamente como fachada de composición.
-- **Gestión de recursos:** `RepositorioSQLite._conexion` delimita transacción y cierre con un gestor de contexto.
-
-
 ## Inicio rápido
 
 Requiere Python 3.10 o posterior.
@@ -186,16 +86,43 @@ La instalación añade el comando equivalente `analizador-redes`.
 
 ## Informe visual
 
-La opción `--html` genera un panel estático con resumen, participación, temas frecuentes y actividad
-temporal. El fichero incluye sus estilos, no necesita JavaScript, funciona sin conexión y puede abrirse
-en cualquier navegador moderno de Windows, macOS o Linux.
+La opción `--html` genera un informe visual estático con:
 
-```bash
-python -m analizador_redes --db datos/conversaciones.sqlite3 analizar 1 \
-  --html informes/conversacion.html
+- número total de mensajes;
+- número de participantes;
+- distribución de participación;
+- temas frecuentes;
+- actividad temporal.
+
+Por ejemplo:
+
+```powershell
+python -m analizador_redes --db build/demo/demo.sqlite3 analizar 1 `
+    --top 5 `
+    -o build/demo/resumen.json `
+    --html build/demo/informe.html
 ```
 
-Se puede combinar `--html` con `-o` para conservar a la vez el informe visual y el JSON reutilizable.
+Después puede abrirse directamente en Windows:
+
+```powershell
+Start-Process ".\build\demo\informe.html"
+```
+
+En macOS:
+
+```bash
+open build/demo/informe.html
+```
+
+En Linux:
+
+```bash
+xdg-open build/demo/informe.html
+```
+
+El HTML es un **artefacto generado por la aplicación Python**, no una aplicación web independiente. Es autocontenido, funciona sin servidor y no necesita recursos externos.
+
 
 ## Formato de entrada
 
